@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical" >
+
+       <TextView
+        android:id="@+id/knock_titie"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="بازی های حذفی"
+        android:textSize="25sp"
+        />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_matches"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:scrollbars="none"
+        >
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+        <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical" >
+
+               <TextView
+			        android:id="@+id/knock_txt_1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:textColor="#fff"
+                   android:background="@color/colorAccent"
+                   android:text="یک هشتم نهایی"
+                   android:gravity="center"
+                   />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/knoukout_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+               <TextView
+			        android:id="@+id/knock_txt_2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:textColor="#fff"
+                   android:background="@color/colorAccent"
+                   android:gravity="center"
+                   android:text="یک چهارم نهایی" />
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/knoukout_2"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+               
+               <TextView
+			        android:id="@+id/knock_txt_3"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:textColor="#fff"
+                   android:background="@color/colorAccent"
+                   android:gravity="center"
+                   android:text="نیمه نهایی" />
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/knoukout_3"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+
+               <TextView
+                   android:id="@+id/knock_txt_4"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:text="فینال"
+                   android:background="@color/colorAccent"
+                   android:textColor="#fff" />
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/knoukout_4"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/layout_about" >
+
+     <TextView
+         android:id="@+id/fonts_title"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="0.15"
+         android:background="@color/colorPrimary"
+         android:text="نام ورزشگاه"
+         android:textColor="#ffffff"
+         android:layout_gravity="center"
+         android:gravity="center"
+         android:textSize="20sp"
+          />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:id="@+id/fonts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorGray"
+
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/text_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:text="یکان"
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_font_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="center"
+                        android:text="انتخاب قلم"
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:id="@+id/text_size"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text="17"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/text_size_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="انتخاب سایز قلم"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimary"
+                >
+            </View>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/setting_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <Switch
+                            android:id="@+id/switch_alarm"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center|right"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/text_switch_alarm"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.65"
+                            android:gravity="center|left"
+                            android:text="فعال سازی هشدار بازی ها"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_min_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="زمان مورد نظر برای هشدار قبل از بازی"
+                        android:textColor="#000000" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar_min"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:max="30" />
+
+                    <TextView
+                        android:id="@+id/text_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="15 دقیقه"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/save_setting"
+                android:layout_width="240dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="ذخیره"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:layout_marginTop="40dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

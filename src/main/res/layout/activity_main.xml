@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorGray"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.12"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal">
+
+
+                    <desertstars.afcasiancup2019.SquareView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        >
+
+                        <Button
+                            android:id="@+id/opt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/icon_drawer"
+                            android:padding="5dp" />
+
+                    </desertstars.afcasiancup2019.SquareView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <desertstars.afcasiancup2019.SquareView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        >
+
+                        <Button
+                            android:id="@+id/calender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/icon_calendar"
+                            android:padding="5dp" />
+
+                    </desertstars.afcasiancup2019.SquareView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.35"
+                        android:orientation="horizontal"
+                        android:background="@color/colorAccent"
+                        >
+
+                        <TextView
+                            android:id="@+id/title_day"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="روز"
+                            android:textColor="#fff"
+                            />
+
+                        <TextView
+                            android:id="@+id/title_hour"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="ساعت"
+                            android:textColor="#fff" />
+
+
+                        <TextView
+                            android:id="@+id/title_min"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="دقیقه"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:id="@+id/title_sec"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="ثانیه"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.65"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_countdown"
+                        >
+
+                        <TextView
+                            android:id="@+id/countdown_day"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/countdown_hour"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary" />
+
+
+                        <TextView
+                            android:id="@+id/countdown_min"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/countdown_sec"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="نام گروه"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6">
+
+                    <LinearLayout
+                        android:id="@+id/layout_grouping"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/list_grouping"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@null">
+                        </ListView>
+
+                        <ImageView
+                            android:id="@+id/image_knockout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/knockout_stage"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05" />
+
+                <TextView
+                    android:id="@+id/group_match"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:text="نتایج و بازی های گروه"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05" />
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:background="#ffffff"
+                    />
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:cacheColorHint="#00000000"
+            />
+    </android.support.v4.widget.DrawerLayout>
+
+</TabHost>
